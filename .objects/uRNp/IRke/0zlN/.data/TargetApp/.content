@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="R7YHfUFH6U2t1zZ9bj8Mrg" Selector="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features'/&gt;" Url="https://captcha.com/demos/features/captcha-demo.aspx" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0Artb6u5bYk-YgTSxJi4SaQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="4fe265dc48f482304ddb39840946f9f2.png" xmlns="">05bM9Z4xMwE669SQjO4KC0w</imageRef>
+</TargetApp>

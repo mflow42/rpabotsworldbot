@@ -1,0 +1,14 @@
+﻿{
+  "Id": "0zlNzR7-4EeIGdI53DxCWg",
+  "Reference": "pt8HmOMdVEKqbiJUljc6VA/0zlNzR7-4EeIGdI53DxCWg",
+  "ParentRef": "pt8HmOMdVEKqbiJUljc6VA/IRkem13RWUOSQ8q3bwvLyQ",
+  "Name": "Use Browser Chrome BotDetect CAPTCHA Demo - Featu",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-12-13T18:46:27.6391951Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-12-13T18:46:27.6391951Z"
+}

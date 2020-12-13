@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RFBIbymYWkefWv9BGmqtig",
+  "Reference": "pt8HmOMdVEKqbiJUljc6VA/RFBIbymYWkefWv9BGmqtig",
+  "ParentRef": "pt8HmOMdVEKqbiJUljc6VA/0zlNzR7-4EeIGdI53DxCWg",
+  "Name": "Type Into 'Captcha'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-12-13T19:05:44.2962735Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-12-13T19:05:44.2962735Z"
+}

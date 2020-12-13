@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="_dEdA0DGJkqYTna6kMDujA" DesignTimeRectangle="899, 509, 50, 19" ElementType="Button" FriendlyName="'Validate'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='ValidateCaptchaButton' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='ValidateCaptchaButton' tag='INPUT' type='submit' aaname='Validate' check:text='Validate' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" Text="Validate" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0myWJ5dbaYUOWfhe5DEZ_sA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="601d80a6621abdf50e6bea13cb5e5770.png" xmlns="">0EAvQ5WMVSEOkYAPxohZ0EQ</imageRef>
+</TargetAnchorable>

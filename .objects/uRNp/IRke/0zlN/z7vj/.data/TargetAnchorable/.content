@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="F_8c1YVPg0GSQgmL-kYoOw" DesignTimeRectangle="978, 452, 22, 22" ElementType="Icon" FriendlyName="'IMG  c_captchademo_samp…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_ReloadIcon' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_ReloadIcon' tag='IMG' type='' aaname='Change the CAPTCHA code' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0BQgdG8bTukikilAeHPy0_w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="0abd569b2f3a6c00c3cf716153bca73b.png" xmlns="">01aGid3-WFUWvDpaOoNjUUw</imageRef>
+</TargetAnchorable>

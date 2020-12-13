@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="iziOSydUGUyo5NUHxmIZxA" DesignTimeRectangle="953, 512, 46, 13" ElementType="Text" FriendlyName="'Incorrect!'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaIncorrectLabel' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaIncorrectLabel' tag='SPAN' type='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector" Text="Incorrect!" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0LdiSu10pZUam9PAKuEWdXQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="0a77385109602ea6af0480fae14320e8.png" xmlns="">0YvwL_vPj2Eu1Kumfb4bsaw</imageRef>
+</TargetAnchorable>

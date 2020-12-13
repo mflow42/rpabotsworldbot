@@ -1,0 +1,829 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1045,2704" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="979,2539" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: BotDetect CAPTCHA Demo - Features" sap:VirtualizedContainerService.HintSize="937,2447" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Flowchart sap:VirtualizedContainerService.HintSize="903,2231" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+            <Flowchart.Variables>
+              <Variable x:TypeArguments="x:String" Name="Token" />
+              <Variable x:TypeArguments="x:String" Name="Result" />
+              <Variable x:TypeArguments="x:Int32" Name="StatusCode" />
+              <Variable x:TypeArguments="x:String" Name="KeyboardMarkup" />
+              <Variable x:TypeArguments="x:String" Name="UpdateId" />
+              <Variable x:TypeArguments="x:String" Name="CaptchaImagePath" />
+              <Variable x:TypeArguments="njl:JObject" Name="ResultJObj" />
+              <Variable x:TypeArguments="x:String" Name="ChatId" />
+              <Variable x:TypeArguments="x:String" Name="CallbackQueryId" />
+              <Variable x:TypeArguments="x:String" Name="Action" />
+              <Variable x:TypeArguments="x:String" Name="CaptchaResult" />
+              <Variable x:TypeArguments="x:String" Name="AnswerText" />
+            </Flowchart.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <av:Point x:Key="ShapeLocation">480,2.5</av:Point>
+                <av:Size x:Key="ShapeSize">60,75</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">510,77.5 510,107.5 509.895,107.5 509.895,127.5</av:PointCollection>
+                <x:Double x:Key="Width">869</x:Double>
+                <x:Double x:Key="Height">2195</x:Double>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart.StartNode>
+              <x:Reference>__ReferenceID27</x:Reference>
+            </Flowchart.StartNode>
+            <FlowStep x:Name="__ReferenceID27">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">378.895,127.5</av:Point>
+                  <av:Size x:Key="ShapeSize">262,61</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">509.895,187.5 509.895,237.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Assign Token" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Token]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">409.895,237.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,22</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">509.895,259.5 509.895,309.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request getUpdates" EndPoint="https://api.telegram.org/bot{token}/getUpdates" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
+                    <ui:HttpClient.Attachments>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Attachments>
+                    <ui:HttpClient.Cookies>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Cookies>
+                    <ui:HttpClient.Headers>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Headers>
+                    <ui:HttpClient.Parameters>
+                      <InArgument x:TypeArguments="x:String" x:Key="offset">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(CInt(UpdateId)=0,&quot;0&quot;,(CInt(UpdateId)+1).ToString)" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="limit">
+                        <Literal x:TypeArguments="x:String">1</Literal>
+                      </InArgument>
+                    </ui:HttpClient.Parameters>
+                    <ui:HttpClient.UrlSegments>
+                      <InArgument x:TypeArguments="x:String" x:Key="token">[Token]</InArgument>
+                    </ui:HttpClient.UrlSegments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:HttpClient>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">342.895,309.5</av:Point>
+                          <av:Size x:Key="ShapeSize">334,61</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">509.895,370.5 509.895,410.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[ResultJObj]" JsonString="[Result]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:DeserializeJson>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">378.895,410.5</av:Point>
+                              <av:Size x:Key="ShapeSize">262,61</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">509.895,471.5 509.895,519.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Assign UpdateId" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[UpdateId]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[If(ResultJObj("result")(0)("update_id") IsNot Nothing, ResultJObj("result")(0)("update_id").ToString, "0")]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">378.895,519.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">509.895,580.5 509.895,629.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Assign ChatId" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[ChatId]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID0">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">409.895,629.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">509.895,681.5 509.895,730.5</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'Captcha'" FileName="screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2">
+                                    <uix:NTakeScreenshot.SavedTo>
+                                      <OutArgument x:TypeArguments="x:String">[CaptchaImagePath]</OutArgument>
+                                    </uix:NTakeScreenshot.SavedTo>
+                                    <uix:NTakeScreenshot.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="jb8LfUN-gEqIAz_zOhNXsQ" DesignTimeRectangle="724, 451, 250, 50" ElementType="Icon" FriendlyName="'IMG  c_captchademo_samp…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_CaptchaImage' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_CaptchaImage' tag='IMG' type='' aaname='Retype the CAPTCHA code from the image' /&gt;" ImageBase64="" InformativeScreenshot="eca8b199768c0169414c6ec53f33de5a.png" Reference="pt8HmOMdVEKqbiJUljc6VA/aG0GJP5CGEaen6pxMByl2g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector" />
+                                    </uix:NTakeScreenshot.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTakeScreenshot>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID5">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">378.895,730.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">509.895,791.5 509.895,854.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign DisplayName="Assign KeyboardMarkup" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[KeyboardMarkup]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">["{""inline_keyboard"": [[{""text"": ""change"",""callback_data"": ""change""},{""text"": ""speak"",""callback_data"": ""speak""}]]}"]</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID6">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">409.895,854.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">509.895,876.5 509.895,936.5</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="multipart/form-data" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request sendPhoto" EndPoint="[&quot;https://api.telegram.org/bot&quot;+Token+&quot;/sendPhoto&quot;]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[result]" StatusCode="[statusCode]" TimeoutMS="6000">
+                                            <ui:HttpClient.Attachments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="photo">
+                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CaptchaImagePath" />
+                                              </InArgument>
+                                            </ui:HttpClient.Attachments>
+                                            <ui:HttpClient.Cookies>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Cookies>
+                                            <ui:HttpClient.Headers>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Headers>
+                                            <ui:HttpClient.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="chat_id">
+                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ChatId" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="reply_markup">
+                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="KeyboardMarkup" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="caption">
+                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Now.ToString(&quot;dd.MM.yyyy HH:mm:ss&quot;)" />
+                                              </InArgument>
+                                            </ui:HttpClient.Parameters>
+                                            <ui:HttpClient.UrlSegments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.UrlSegments>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:HttpClient>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID2">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">409.895,936.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">509.895,958.5 509.895,1008.5</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request getUpdates" EndPoint="https://api.telegram.org/bot{token}/getUpdates" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
+                                                <ui:HttpClient.Attachments>
+                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                </ui:HttpClient.Attachments>
+                                                <ui:HttpClient.Cookies>
+                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                </ui:HttpClient.Cookies>
+                                                <ui:HttpClient.Headers>
+                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                </ui:HttpClient.Headers>
+                                                <ui:HttpClient.Parameters>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="offset">
+                                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(CInt(UpdateId)=0,&quot;0&quot;,(CInt(UpdateId)+1).ToString)" />
+                                                  </InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="limit">
+                                                    <Literal x:TypeArguments="x:String">1</Literal>
+                                                  </InArgument>
+                                                </ui:HttpClient.Parameters>
+                                                <ui:HttpClient.UrlSegments>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="token">[Token]</InArgument>
+                                                </ui:HttpClient.UrlSegments>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:HttpClient>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID4">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">342.895,1008.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">334,61</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">509.895,1069.5 509.895,1118.5</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[ResultJObj]" JsonString="[Result]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:DeserializeJson>
+                                                  <FlowStep.Next>
+                                                    <FlowDecision x:Name="__ReferenceID9" DisplayName="Answer is a Callback?" sap:VirtualizedContainerService.HintSize="118,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                                      <FlowDecision.Condition>
+                                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ResultJObj(&quot;result&quot;).Count &gt; 0 AndAlso&#xD;&#xA;ResultJObj(&quot;result&quot;)(0)(&quot;callback_query&quot;) IsNot Nothing" />
+                                                      </FlowDecision.Condition>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <av:Point x:Key="ShapeLocation">450.895,1118.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">118,87</av:Size>
+                                                          <av:PointCollection x:Key="FalseConnector">568.895,1162 759.395,1162 759.395,1238.5</av:PointCollection>
+                                                          <av:PointCollection x:Key="TrueConnector">450.895,1162 271,1162 271,1242</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <FlowDecision.True>
+                                                        <FlowStep x:Name="__ReferenceID11">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">140,1242</av:Point>
+                                                              <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">271,1303 271,1352</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign DisplayName="Assign CallbackQueryId" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[CallbackQueryId]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">[ResultJObj("result")(0)("callback_query")("id").ToString]</InArgument>
+                                                            </Assign.Value>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </Assign>
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID12">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">140,1352</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">271,1413 271,1462</av:PointCollection>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <Assign DisplayName="Assign Action" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:String">[Action]</OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:String">[ResultJObj("result")(0)("callback_query")("data").ToString]</InArgument>
+                                                                </Assign.Value>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Assign>
+                                                              <FlowStep.Next>
+                                                                <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID2}" x:Name="__ReferenceID13" DisplayName="Action" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                                                                  <FlowSwitch.Expression>
+                                                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Action" />
+                                                                  </FlowSwitch.Expression>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <av:Point x:Key="ShapeLocation">236,1462</av:Point>
+                                                                      <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                                                      <av:PointCollection x:Key="Default">236,1505.5 116,1505.5 116,947.5 409.895,947.5</av:PointCollection>
+                                                                      <av:PointCollection x:Key="Case2Connector">161,1429 161,1459 171,1459 171,1489</av:PointCollection>
+                                                                      <av:PointCollection x:Key="speakConnector">288.5,1549 288.5,1579 381,1579 381,1629</av:PointCollection>
+                                                                      <av:PointCollection x:Key="changeConnector">253.5,1549 253.5,1579 161,1579 161,1629</av:PointCollection>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <FlowStep x:Key="speak" x:Name="__ReferenceID23">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <av:Point x:Key="ShapeLocation">281,1629</av:Point>
+                                                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">381,1680 381,1710 380.895,1710 380.895,1730</av:PointCollection>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <uix:NClick ClickType="Single" DisplayName="Click 'speak'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                                                      <uix:NClick.Target>
+                                                                        <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="MPEEX9HAtkau_2Xo74tKkw" DesignTimeRectangle="978, 479, 22, 22" ElementType="Icon" FriendlyName="'IMG  c_captchademo_samp…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_SoundIcon' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_SoundIcon' tag='IMG' type='' aaname='Speak the CAPTCHA code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKdSURBVEhLxZTLS2pRFIfvn+REEIJmEUgF0lDERkHkoAcokeGggVHhREmJBk2aWFBQaknmIyl6QCGogaDQQMGgd2n5+F3Wgh1HPd7jDakDH/ucvdba31nu7flTKpXwE/y+SKVSfQu5tYgWkSj47tVO2CCihHq93ha65OblaJbJimq1miyPj484Pz/HxcUF3zfHpbVtRRR4e3vjpGq1ykjv3W431Go1ent7MTAwAL1ej729PdlcolAoNMhaRJVK5QuHw4HJyUkMDg5Co9Ggv78fOp2OJSMjIzCZTLi9vW2oESiKPj8/mVAoBKfTibOzM5aQbHx8HMPDwzzOzc3BbrdjbW3tq4YgCY2Koo+PD2Z5eZnntVothoaG+CCcnp5iamoKY2NjWFlZgcvl4q5EjRRFUblcZpaWlnB4eIienh7Mz8+zZHV1lUXU1c7ODjY2NlgkaqQoisSzzWaD1WpFX18fJiYmsLi4CIvFArPZzCISb21tsUjUSFEUvb+/M4lEAkajkTefZNPT05idnYXBYEAgEMDJyQn8fj8WFhY4X1pLKIpeX1+/uLq64rcfHR1lGeHxeHB5ecnd0EHw+XycG4vFuD6dTvOzoujl5aUB2viZmRlsbm7yz0WncHt7G+FwmLsReQcHB7i7u0MkEuFnRdHz8zOenp54JOhA0ILr6+vwer0siUajPCfy6AXo75DL5fie5hRFVEyfFym7u7u8MG08QVIRSyaT3O3DwwPvnZhXFFFBp9zc3HAnNJLw6OiIJRTrSHR/f99C8zz9pMfHx7z5qVQK+/v7DfGudpTP5/lLHgwGW2JtRUJWLBY7gk5dPB5HJpORjUslRIsom812hX+KCEogrq+vv4Wob163RSQQBf+L3FpEW1G3+SFRCX8BkLH4Em+v1BkAAAAASUVORK5CYII=" InformativeScreenshot="4c177ec6440a3bb3788bd992d891a331.png" Reference="pt8HmOMdVEKqbiJUljc6VA/a1BCTTLdfkmjNEdpylurFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                                                      </uix:NClick.Target>
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                    </uix:NClick>
+                                                                    <FlowStep.Next>
+                                                                      <FlowStep x:Name="__ReferenceID26">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <av:Point x:Key="ShapeLocation">249.895,1730</av:Point>
+                                                                            <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                                            <av:PointCollection x:Key="ConnectorLocation">380.895,1791 380.895,1988.02 458.895,1988.02 458.895,2018.02</av:PointCollection>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <Assign DisplayName="Assign CaptchaResult" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                                          <Assign.To>
+                                                                            <OutArgument x:TypeArguments="x:String">[CaptchaResult]</OutArgument>
+                                                                          </Assign.To>
+                                                                          <Assign.Value>
+                                                                            <InArgument x:TypeArguments="x:String">speaked</InArgument>
+                                                                          </Assign.Value>
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                        </Assign>
+                                                                        <FlowStep.Next>
+                                                                          <FlowStep x:Name="__ReferenceID1">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">358.895,2018.02</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">458.895,2040.02 458.895,2100.02</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request sendMessage" EndPoint="[&quot;https://api.telegram.org/bot&quot;+Token+&quot;/sendMessage&quot;]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
+                                                                              <ui:HttpClient.Attachments>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                                              </ui:HttpClient.Attachments>
+                                                                              <ui:HttpClient.Cookies>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                                              </ui:HttpClient.Cookies>
+                                                                              <ui:HttpClient.Headers>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                                              </ui:HttpClient.Headers>
+                                                                              <ui:HttpClient.Parameters>
+                                                                                <InArgument x:TypeArguments="x:String" x:Key="chat_id">
+                                                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ChatId" />
+                                                                                </InArgument>
+                                                                                <InArgument x:TypeArguments="x:String" x:Key="text">
+                                                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CaptchaResult" />
+                                                                                </InArgument>
+                                                                              </ui:HttpClient.Parameters>
+                                                                              <ui:HttpClient.UrlSegments>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                                              </ui:HttpClient.UrlSegments>
+                                                                            </ui:HttpClient>
+                                                                            <FlowStep.Next>
+                                                                              <FlowStep x:Name="__ReferenceID21">
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <av:Point x:Key="ShapeLocation">327.895,2100.02</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">458.895,2161.02 458.895,2191.02 38.895,2191.02 38.895,655.5 409.895,655.5</av:PointCollection>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                <Assign DisplayName="Assign UpdateId" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                                                  <Assign.To>
+                                                                                    <OutArgument x:TypeArguments="x:String">[UpdateId]</OutArgument>
+                                                                                  </Assign.To>
+                                                                                  <Assign.Value>
+                                                                                    <InArgument x:TypeArguments="x:String">[ResultJObj("result")(0)("update_id").ToString]</InArgument>
+                                                                                  </Assign.Value>
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </Assign>
+                                                                                <FlowStep.Next>
+                                                                                  <x:Reference>__ReferenceID0</x:Reference>
+                                                                                </FlowStep.Next>
+                                                                              </FlowStep>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                        </FlowStep.Next>
+                                                                      </FlowStep>
+                                                                    </FlowStep.Next>
+                                                                  </FlowStep>
+                                                                  <FlowStep x:Key="change" x:Name="__ReferenceID14">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <av:Point x:Key="ShapeLocation">61,1629</av:Point>
+                                                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">161,1680 161,1710 160.895,1710 160.895,1900</av:PointCollection>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <uix:NClick ClickType="Single" DisplayName="Click 'change'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                                                      <uix:NClick.Target>
+                                                                        <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="F_8c1YVPg0GSQgmL-kYoOw" DesignTimeRectangle="978, 452, 22, 22" ElementType="Icon" FriendlyName="'IMG  c_captchademo_samp…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_ReloadIcon' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='c_captchademo_samplecaptcha_ReloadIcon' tag='IMG' type='' aaname='Change the CAPTCHA code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJCSURBVEhLxZTLq3FRGIe//4iRoRQ6MZBLHSWXUMjIZXTESNQxYmJKhkz8B8zMFHLpTAyOMkAux3HnPb1vrZ3N9m2fdL5VT+vye9d6rJ29/6zXa/gN/r9IKpU+hNBZyJWIbXi03RLyRFhwOp04WLucY2PzyzrWLmWCouPxSLAx9ki324VsNguxWAxSqRSUy2UuO6/D8U0RBqvVipMwDocD9e/v7+B2uyEcDoPBYACLxUK9Xq+HTqdztW84HPJkVyI8+B4KhQIoFAowmUyg0Wig3W7zclHRfr+/G7wl3grxer28TFS02+141Go1+uWTyUQw02q1dCuVSsXLREWbzQa22y3RarVAJpOB3+8Hq9UK4/GYy5B8Ps8Tne+9S4SMRiOSBINBEpnNZohGo5Q1m03KmATBx4dzXEdERQwsjsfjEAqFwOfz0Y1wLZfLUV4qlWjORAjOG40G5aKi7+9v2mCz2YhAIEB/a3w0uI5gDZJMJjkZ9sVikctERcvlkiOTydC/yel0koitf319cWOXy0WSRCLBrSGiIjxksVgQ9XodjEYj2O12UCqV8PHxQfl5DR6YTqdpzNaxFxVh4Xw+5/B4PPD6+go6nY478DxHhNZERbPZjMdgMKDPDYrUajVEIhGoVquU9Xo9bnyJqGg6nV7x+fkJb29vIJfL4eXlhXqJRAIOh4M+tEJ7HhIxUFipVAgcC9UwboqYDF/UZ3AuQa5E/X7/KfxVhGABgm/4I7D9l+deiRhsw78idBZyU/Rsfkm0hh9mHtwECdckHgAAAABJRU5ErkJggg==" InformativeScreenshot="0abd569b2f3a6c00c3cf716153bca73b.png" Reference="pt8HmOMdVEKqbiJUljc6VA/z7vj973suUqxwVQFz5rSFg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                                                      </uix:NClick.Target>
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                    </uix:NClick>
+                                                                    <FlowStep.Next>
+                                                                      <FlowStep x:Name="__ReferenceID25">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <av:Point x:Key="ShapeLocation">29.895,1900</av:Point>
+                                                                            <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                                            <av:PointCollection x:Key="ConnectorLocation">160.895,1961 160.895,1991 458.895,1991 458.895,2018.02</av:PointCollection>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <Assign DisplayName="Assign CaptchaResult" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                                          <Assign.To>
+                                                                            <OutArgument x:TypeArguments="x:String">[CaptchaResult]</OutArgument>
+                                                                          </Assign.To>
+                                                                          <Assign.Value>
+                                                                            <InArgument x:TypeArguments="x:String">changed</InArgument>
+                                                                          </Assign.Value>
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                        </Assign>
+                                                                        <FlowStep.Next>
+                                                                          <x:Reference>__ReferenceID1</x:Reference>
+                                                                        </FlowStep.Next>
+                                                                      </FlowStep>
+                                                                    </FlowStep.Next>
+                                                                  </FlowStep>
+                                                                </FlowSwitch>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
+                                                        </FlowStep>
+                                                      </FlowDecision.True>
+                                                      <FlowDecision.False>
+                                                        <FlowDecision x:Name="__ReferenceID10" DisplayName="Answer is a Message?" sap:VirtualizedContainerService.HintSize="119,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                                          <FlowDecision.Condition>
+                                                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ResultJObj(&quot;result&quot;).Count &gt; 0 AndAlso&#xD;&#xA;ResultJObj(&quot;result&quot;)(0)(&quot;message&quot;) IsNot Nothing" />
+                                                          </FlowDecision.Condition>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <av:Point x:Key="ShapeLocation">698.895,1238.5</av:Point>
+                                                              <av:Size x:Key="ShapeSize">119,87</av:Size>
+                                                              <av:PointCollection x:Key="TrueConnector">698.895,1282 618.79,1282 618.79,1350</av:PointCollection>
+                                                              <av:PointCollection x:Key="FalseConnector">817.895,1282 847.895,1282 847.895,947.5 609.895,947.5</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <FlowDecision.True>
+                                                            <FlowStep x:Name="__ReferenceID22">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">487.79,1350</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">262,61</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">618.79,1411 618.79,1441 618.895,1441 618.895,1466.02</av:PointCollection>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <Assign DisplayName="Assign AnswerText" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:String">[AnswerText]</OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:String">[ResultJObj("result")(0)("message")("text").ToString]</InArgument>
+                                                                </Assign.Value>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Assign>
+                                                              <FlowStep.Next>
+                                                                <FlowStep x:Name="__ReferenceID16">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <av:Point x:Key="ShapeLocation">518.895,1466.02</av:Point>
+                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                      <av:PointCollection x:Key="ConnectorLocation">618.895,1518.02 618.895,1567.02</av:PointCollection>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Captcha text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[AnswerText]">
+                                                                    <uix:NTypeInto.Target>
+                                                                      <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="zVIZ2666rkC8460Nh3KBag" DesignTimeRectangle="724, 509, 172, 19" ElementType="InputBox" FriendlyName="'INPUT  CaptchaCodeTextB…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaCodeTextBox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaCodeTextBox' tag='INPUT' type='text' aaname='Retype the characters from the picture:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALAAAAAXCAYAAACrrsUIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVHhe7dtBCgMhEERRwQt4AG/pOT2PG8HQQoc0k2TdBf9BLYZhdp9ZaVlrHcZU9w54730ABdZqCNjjHWOc3vtprTGWbtamNWo84huwsRffPmIs2zziELD/eWut9xnIZs55G7VWTQjY6y6l3GcgI+/UEDDkEDCkETCkETCkETCkETCkETCkETCkETCkETCkETCkETCk/QyY02jI7u9pNM4DM5U9zgNzI4MpzNr0eMONjM+Igew83hAwY3pb5wUIFZcGV8SSEwAAAABJRU5ErkJggg==" InformativeScreenshot="ed0826907fd2ac4bb99ef94556b1e3c4.png" Reference="pt8HmOMdVEKqbiJUljc6VA/RFBIbymYWkefWv9BGmqtig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                                        <uix:TargetAnchorable.Anchors>
+                                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                            <uix:Target DesignTimeRectangle="724, 431, 225, 15" ElementType="Text" FriendlyName="'Retype the'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl parentid='Preview' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl parentid='Preview' tag='LABEL' type='' aaname='Retype the characters from the picture:' check:text='Retype the characters from the picture:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOUAAAATCAYAAABvAsoSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASNSURBVHhe7Zm9UeRQEIQ3IqKADCADEiABAsDGxycBPAxMPILAxV1zr76t6q2+Zp60cKxOdTdGl/Te/PX002h13Ga73e4ajcZ60EPZaKwMPZSNxsrQQ9lorAyHoXx/f99dXFzsNpvNJzw/P38KXCNub2/3qGw/gbe3t935+fn+Wtn/JTw8POzPnmeCZ6PyOSWW0Prj42N3fX2977Wy/y18GsocQAgfezD40iTNVvafRh7c/zCUS2g8ehZODe9tCa2PHcqlz312KL9yQD2Up8dSQ3l1dbV4n0sP5bFYmsu3hhLx9GkrEbH73tPT028Pjx80vuS8u7s7xHh+1axslc/Z2dk+LwN5c3Ozr+v7iuGevcqWqHrEn8O5v78/2PwlgI9qA/jBE5u4UVf5XDNATeWqNHB/5RhpJS7UZZ9r8nPuo7pwqriPtKw0Iofr6X0K2dvr6+uk1kC9VTZhxAeb9HA+mTOfM3hVMarP9VitVF9nJnz58xW7r50QviKC3d+2xMmmA1Aca5FNoSSq8jjSRj5vmrXz8f6yD0fa1CN5yS/eWisnnGXLPtj3nJU+sk9p4BpP+ckmX+wVP3F3wMG1qri7nbyyU9s1woezFkf3Ze3AJr6ZR2uvKV/1ohoOxWVe8mTcKCcxqavXgqN4zmnFddS/MPuHHhqAjPwo6oSw8XAR702lr99DzPOmAMqHLWMd+OZQAtmdDzWdm2pKLEfmEbJeCu6Qzfuvcgr46bCyTvqpD+wjrVxTj83zrJB9JXf2xTX9k3uuM9aRvY20rs6Oe8VqDxCvIdSe+nGNKr0E51L5uT5+D5KX4p1PYvhLqWAvoL3R4Lqo+IsQuflJl8Ds58FQh3hsmR84D8HFUg73cz7cV3ldXKAecx9kvdTMuaMJvsqT3FLLy8vLgyaVPoL3NKXVqA/W8hsNaPY1pWv6p0a5Pra3jPMauveeQZU38wDqpEae3+OB56h0dX0qrZIn8PjE5Oer9pLAKCH7eVi8yR8fH/dDqX1q+APhjbKXb/8RXCzWlSDiQ03nNoXMI2Q918x7wJbrzEmMP0S+zjoO7wn7SKusXwE+lSbel/ymuLt/cs91xjqytzmtxW8KxK/pl/IYzP6bkrUPEGsXFXJau6iKhyBvhiTqbwuvkU2Ll4sguFisUxDnk/0Rk4clVD2SR398UD3PKd6qz573mNywZ8+qOdKAGO9p5Mc6baDSx9eC12OdcWknj7jnmeSaGPkqn0Ae9ZZxVU35soafrwXi0Vn8tSZPalTlBMnFa4mX8iuGe5C8vb58ErNDKeIuJOT1M6wHi30VdF/y4ed5uceHvMrjdnGRzZt0iJviU5AUWfyUV4dRwXtUP8RPPShcFSMu4pPcnDuc+JqociufuKbGI62U33v0mkA5ZBeyr+QOXEuu4s3V+8g1OUd18VFvLy8vk1oDOM31ovp8qclXmlQaeU49O64b9cWTNXX5XwTpM6cVyPreEzgM5akAofzEmjqYRuMnoaHkWtnXiJMPJW+FfHP0UDaWQg+lQT/N1fD1UDaWQg9lo9H4Y/RQNhqrwnb3C4xtKnYgaLK0AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" Text="Retype the characters from the picture:" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                                                                          </scg:List>
+                                                                        </uix:TargetAnchorable.Anchors>
+                                                                      </uix:TargetAnchorable>
+                                                                    </uix:NTypeInto.Target>
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </uix:NTypeInto>
+                                                                  <FlowStep.Next>
+                                                                    <FlowStep x:Name="__ReferenceID15">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <av:Point x:Key="ShapeLocation">518.895,1567.02</av:Point>
+                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                          <av:PointCollection x:Key="ConnectorLocation">618.895,1619.02 618.895,1668.02</av:PointCollection>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <uix:NClick ClickType="Single" DisplayName="Click 'Validate'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                                                        <uix:NClick.Target>
+                                                                          <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="_dEdA0DGJkqYTna6kMDujA" DesignTimeRectangle="899, 509, 50, 19" ElementType="Button" FriendlyName="'Validate'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='ValidateCaptchaButton' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='ValidateCaptchaButton' tag='INPUT' type='submit' aaname='Validate' check:text='Validate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAXCAYAAABAtbxOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVFhH7ZexrYQwEEQpiCqgAzqgAUICmiAhohISGqAHJDJCQkJ/DdKchj1jkO5LX3A/GJ299q7nrU1w0bqu7on6DrBpmlzTNK4sy1sK3sHwBoaFvu/dsiy3FLyD4Q0M1L6EOwkM3weW5/mmeZ53ScMwuDiOXdd1u7iqqqpNdmzVtq33jE8VBMOhaZq6cRx3SUdx1W+DoZlJkmy/vnWrIJjvZmAARmCIMZ9CMKo/ASOEGtQDuB5F0Sa9RQXTseagaUVR7MCwj/WwjnNQE7U1hr1oCvfa5gTBmKyGtcMYW8OIYa4wOtZ8GuYcL0MNap42FHPsPWokdAqmBa15FU2GwHz5CsoYxL2sYcEQ1zqIZ1n2Aj0FUzO2OLqmzwZrITDC6zert4S6qKP1WEPPpieerR7o7RQMYlfrun6ZUGDssXMfmN2jtbGmObaGgnFN61hdAkMxdtKC8GDeXggMY6zz22ANBeOYZzLPgtlvTOtifgmMBvSqIX2KNE8jR2PONc/CII6Y74VgjU8ZMKxjvV0Cu6P+we4mL9hj/4899h/0k/RQsNX9AIfBZ5gMfBY5AAAAAElFTkSuQmCC" InformativeScreenshot="601d80a6621abdf50e6bea13cb5e5770.png" Reference="pt8HmOMdVEKqbiJUljc6VA/6wsQSRi__kilk2n2sfaofw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" Text="Validate" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                                                                        </uix:NClick.Target>
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                      </uix:NClick>
+                                                                      <FlowStep.Next>
+                                                                        <FlowStep x:Name="__ReferenceID17">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <av:Point x:Key="ShapeLocation">518.895,1668.02</av:Point>
+                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">618.895,1720.02 618.895,1750.02 618.395,1750.02 618.395,1769.02</av:PointCollection>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <uix:NGetText DisplayName="Get Text 'Result'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                                                                            <uix:NGetText.Target>
+                                                                              <uix:TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="iziOSydUGUyo5NUHxmIZxA" DesignTimeRectangle="953, 512, 46, 13" ElementType="Text" FriendlyName="'Incorrect!'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='Captcha*orrectLabel' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='Captcha*orrectLabel' tag='SPAN' type='' /&gt;" ImageBase64="" InformativeScreenshot="0a77385109602ea6af0480fae14320e8.png" Reference="pt8HmOMdVEKqbiJUljc6VA/bHuKhHT81UGPir8Bc6bNqg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector" Text="Incorrect!" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                                                                            </uix:NGetText.Target>
+                                                                            <uix:NGetText.Text>
+                                                                              <OutArgument x:TypeArguments="x:String">[CaptchaResult]</OutArgument>
+                                                                            </uix:NGetText.Text>
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                          </uix:NGetText>
+                                                                          <FlowStep.Next>
+                                                                            <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID2}" x:Name="__ReferenceID18" DisplayName="CaptchaResult" sap:VirtualizedContainerService.HintSize="82,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+                                                                              <FlowSwitch.Expression>
+                                                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CaptchaResult" />
+                                                                              </FlowSwitch.Expression>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <av:Point x:Key="ShapeLocation">577.895,1769.02</av:Point>
+                                                                                  <av:Size x:Key="ShapeSize">82,87</av:Size>
+                                                                                  <av:PointCollection x:Key="Default">577.895,1812.52 49.895,1812.52 49.895,947.5 409.895,947.5</av:PointCollection>
+                                                                                  <av:PointCollection x:Key="Correct!Connector">598.145,1856.02 598.145,1886.02 498.895,1886.02 498.895,1906.02</av:PointCollection>
+                                                                                  <av:PointCollection x:Key="Incorrect!Connector">638.645,1856.02 638.645,1886.02 739.895,1886.02 739.895,1907.02</av:PointCollection>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                              <FlowStep x:Key="Correct!" x:Name="__ReferenceID19">
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <av:Point x:Key="ShapeLocation">398.895,1906.02</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">498.895,1957.02 498.895,1987.02 458.895,1987.02 458.895,2018.02</av:PointCollection>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                <ui:LogMessage DisplayName="Log Message Correct!" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Correct!&quot;]">
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </ui:LogMessage>
+                                                                                <FlowStep.Next>
+                                                                                  <x:Reference>__ReferenceID1</x:Reference>
+                                                                                </FlowStep.Next>
+                                                                              </FlowStep>
+                                                                              <FlowStep x:Key="Incorrect!" x:Name="__ReferenceID20">
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <av:Point x:Key="ShapeLocation">639.895,1907.02</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">739.895,1958.02 739.895,1988.02 458.895,1988.02 458.895,2018.02</av:PointCollection>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                <ui:LogMessage DisplayName="Log Message Incorrect!" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Incorrect!&quot;]">
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </ui:LogMessage>
+                                                                                <FlowStep.Next>
+                                                                                  <x:Reference>__ReferenceID1</x:Reference>
+                                                                                </FlowStep.Next>
+                                                                              </FlowStep>
+                                                                            </FlowSwitch>
+                                                                          </FlowStep.Next>
+                                                                        </FlowStep>
+                                                                      </FlowStep.Next>
+                                                                    </FlowStep>
+                                                                  </FlowStep.Next>
+                                                                </FlowStep>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowDecision.True>
+                                                          <FlowDecision.False>
+                                                            <x:Reference>__ReferenceID2</x:Reference>
+                                                          </FlowDecision.False>
+                                                        </FlowDecision>
+                                                      </FlowDecision.False>
+                                                    </FlowDecision>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+            <x:Reference>__ReferenceID3</x:Reference>
+            <x:Reference>__ReferenceID4</x:Reference>
+            <x:Reference>__ReferenceID5</x:Reference>
+            <x:Reference>__ReferenceID6</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID0</x:Reference>
+            <x:Reference>__ReferenceID7</x:Reference>
+            <x:Reference>__ReferenceID8</x:Reference>
+            <x:Reference>__ReferenceID9</x:Reference>
+            <x:Reference>__ReferenceID10</x:Reference>
+            <x:Reference>__ReferenceID11</x:Reference>
+            <x:Reference>__ReferenceID12</x:Reference>
+            <x:Reference>__ReferenceID13</x:Reference>
+            <x:Reference>__ReferenceID14</x:Reference>
+            <x:Reference>__ReferenceID15</x:Reference>
+            <x:Reference>__ReferenceID16</x:Reference>
+            <x:Reference>__ReferenceID17</x:Reference>
+            <x:Reference>__ReferenceID18</x:Reference>
+            <x:Reference>__ReferenceID19</x:Reference>
+            <x:Reference>__ReferenceID20</x:Reference>
+            <x:Reference>__ReferenceID21</x:Reference>
+            <x:Reference>__ReferenceID22</x:Reference>
+            <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID23</x:Reference>
+            <x:Reference>__ReferenceID24</x:Reference>
+            <x:Reference>__ReferenceID25</x:Reference>
+            <x:Reference>__ReferenceID26</x:Reference>
+          </Flowchart>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" ContentHash="R7YHfUFH6U2t1zZ9bj8Mrg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4fe265dc48f482304ddb39840946f9f2.png" Reference="pt8HmOMdVEKqbiJUljc6VA/0zlNzR7-4EeIGdI53DxCWg" Selector="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features'/&gt;" Url="https://captcha.com/demos/features/captcha-demo.aspx" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

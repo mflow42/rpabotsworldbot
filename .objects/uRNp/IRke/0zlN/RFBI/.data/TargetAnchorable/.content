@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://demos.captcha.com/demos/features/captcha-demo.aspx" ContentHash="zVIZ2666rkC8460Nh3KBag" DesignTimeRectangle="724, 509, 172, 19" ElementType="InputBox" FriendlyName="'INPUT  CaptchaCodeTextB…'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaCodeTextBox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl id='CaptchaCodeTextBox' tag='INPUT' type='text' aaname='Retype the characters from the picture:' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BotDetect CAPTCHA Demo - Features' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="724, 431, 225, 15" ElementType="Text" FriendlyName="'Retype the'" FullSelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl parentid='Preview' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='demo_frame' tag='IFRAME' /&gt;&lt;webctrl parentid='Preview' tag='LABEL' type='' aaname='Retype the characters from the picture:' check:text='Retype the characters from the picture:' /&gt;" SearchSteps="FuzzySelector, Image" Text="Retype the characters from the picture:" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1wFRaA4g6g0qFh4yfkw7q7g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0v_1dYquczU-m7LfTz6zPWQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="ed0826907fd2ac4bb99ef94556b1e3c4.png" xmlns="">0GWLfsBCuLkSA6beSr6oE7Q</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,15 @@
+﻿{
+  "Id": "IRkem13RWUOSQ8q3bwvLyQ",
+  "Reference": "pt8HmOMdVEKqbiJUljc6VA/IRkem13RWUOSQ8q3bwvLyQ",
+  "ParentRef": "pt8HmOMdVEKqbiJUljc6VA/uRNp59DVuECxv8ZYUBfDuw",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2020-12-13T18:43:33.9366524Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-12-13T18:43:34.1633094Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
